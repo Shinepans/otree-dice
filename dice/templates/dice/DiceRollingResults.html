@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Dice Result
+{% endblock %}
+
+{% block content %}
+<table class="table">
+    <tr>
+        <td>您的筛子:</td>
+        <td>{{ player.dice }}</td>
+    </tr>
+    <tr>
+        <td>系统记录的骰子:</td>
+        <td>
+            {% if player.report %}
+                {{ player.report }}
+            {% else %}
+                玩家没有摇骰子
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>报酬:</td>
+        <td>{{ player.payoff }}</td>
+    </tr>
+</table>
+
+
+
+
+{% next_button %}
+
+{% endblock %}

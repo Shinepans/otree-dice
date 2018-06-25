@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Cuestionario
+
+{% endblock %}
+
+{% block content %}
+    <ol type="a" class="list-group">
+        <li class="list-group-item">
+            Recibirá un pago por responder el siguiente cuestionario, que se determinará de la siguiente manera.
+        </li>
+        <li class="list-group-item">
+            En su pantalla, habrá un botón que le permitirá tirar un dado de forma virtual.
+        </li>
+        <li class="list-group-item">
+            A continuación, se le pedirá que informe el número que sale. Ganarás 100 veces el número que informes en
+            {{curname}}.
+        </li>
+        <li class="list-group-item">
+            El dado virtual es un dado justo, todas las caras tienen las mismas probabilidades de aparecer. Si desea
+            confirmar esto, puedes tirar el dado tantas veces como quieras, solo te pedimos que informes el resultado
+            del primer lanzamiento. Alternativamente, puedes lanzar el dado que se encuentra en tu escritorio.
+        </li>
+    </ol>
+    <div class="mt-3">
+        {% next_button %}
+    </div>
+{% endblock %}
